@@ -1,0 +1,15 @@
+from __future__ import absolute_import
+
+# flake8: noqa
+
+# import apis into api package
+from swagger_client.api.flux_v2_packages_service_api import FluxV2PackagesServiceApi
+from swagger_client.api.flux_v2_repositories_service_api import FluxV2RepositoriesServiceApi
+from swagger_client.api.helm_packages_service_api import HelmPackagesServiceApi
+from swagger_client.api.helm_repositories_service_api import HelmRepositoriesServiceApi
+from swagger_client.api.kapp_controller_packages_service_api import KappControllerPackagesServiceApi
+from swagger_client.api.kapp_controller_repositories_service_api import KappControllerRepositoriesServiceApi
+from swagger_client.api.packages_service_api import PackagesServiceApi
+from swagger_client.api.plugins_service_api import PluginsServiceApi
+from swagger_client.api.repositories_service_api import RepositoriesServiceApi
+from swagger_client.api.resources_service_api import ResourcesServiceApi
