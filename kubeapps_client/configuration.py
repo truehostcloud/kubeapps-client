@@ -27,7 +27,7 @@ class TypeWithDefault(type):
         super(TypeWithDefault, cls).__init__(name, bases, dct)
         cls._default = None
 
-    def __call__(cls):
+    def __call__(cls, *args, **kwargs):
         if cls._default is None:
             cls._default = type.__call__(cls)
         return copy.copy(cls._default)
@@ -43,10 +43,10 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
     Do not edit the class manually.
     """
 
-    def __init__(self):
+    def __init__(self, host):
         """Constructor"""
         # Default Base url
-        self.host = "{schema}://{url}:{port}"
+        self.host = host
         # Temp file folder for downloading files
         self.temp_folder_path = None
 
