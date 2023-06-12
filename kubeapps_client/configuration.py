@@ -52,9 +52,9 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
 
         # Authentication Settings
         # dict to store API key(s)
-        self.api_key = {}
+        self.api_key = api_key
         # dict to store API prefix (e.g. Bearer)
-        self.api_key_prefix = {}
+        self.api_key_prefix = api_key_prefix
         # function to refresh API key if expired
         self.refresh_api_key_hook = None
         # Username for HTTP basic authentication
