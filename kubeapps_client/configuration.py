@@ -43,7 +43,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
     Do not edit the class manually.
     """
 
-    def __init__(self, host):
+    def __init__(self, host, api_key, api_key_prefix):
         """Constructor"""
         # Default Base url
         self.host = host
