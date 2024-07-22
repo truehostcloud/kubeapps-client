@@ -164,7 +164,7 @@ class ApiClient(object):
         if _return_http_data_only:
             return (return_data)
         else:
-            return (return_data, response_data.status,
+            return (return_data, response_data.state,
                     response_data.getheaders())
 
     def sanitize_for_serialization(self, obj):
