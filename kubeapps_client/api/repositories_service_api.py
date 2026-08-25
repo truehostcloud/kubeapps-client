@@ -111,7 +111,7 @@ class RepositoriesServiceApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.auth_settings()
 
         return self.api_client.call_api(
             '/apis/core/packages/v1alpha1/repositories', 'POST',
@@ -236,7 +236,7 @@ class RepositoriesServiceApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.auth_settings()
 
         return self.api_client.call_api(
             '/apis/core/packages/v1alpha1/repositories/plugin/{packageRepoRef.plugin.name}/{packageRepoRef.plugin.version}/c/{packageRepoRef.context.cluster}/ns/{packageRepoRef.context.namespace}/{packageRepoRef.identifier}', 'DELETE',
@@ -361,7 +361,7 @@ class RepositoriesServiceApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.auth_settings()
 
         return self.api_client.call_api(
             '/apis/core/packages/v1alpha1/repositories/plugin/{packageRepoRef.plugin.name}/{packageRepoRef.plugin.version}/c/{packageRepoRef.context.cluster}/ns/{packageRepoRef.context.namespace}/{packageRepoRef.identifier}', 'GET',
@@ -458,7 +458,7 @@ class RepositoriesServiceApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.auth_settings()
 
         return self.api_client.call_api(
             '/apis/core/packages/v1alpha1/repositories/c/{context.cluster}/permissions', 'GET',
@@ -551,7 +551,7 @@ class RepositoriesServiceApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.auth_settings()
 
         return self.api_client.call_api(
             '/apis/core/packages/v1alpha1/repositories', 'GET',
@@ -688,7 +688,7 @@ class RepositoriesServiceApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.auth_settings()
 
         return self.api_client.call_api(
             '/apis/core/packages/v1alpha1/repositories/plugin/{packageRepoRef.plugin.name}/{packageRepoRef.plugin.version}/c/{packageRepoRef.context.cluster}/ns/{packageRepoRef.context.namespace}/{packageRepoRef.identifier}', 'PUT',

@@ -111,7 +111,7 @@ class PackagesServiceApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.auth_settings()
 
         return self.api_client.call_api(
             '/apis/core/packages/v1alpha1/installedpackages', 'POST',
@@ -236,7 +236,7 @@ class PackagesServiceApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.auth_settings()
 
         return self.api_client.call_api(
             '/apis/core/packages/v1alpha1/installedpackages/plugin/{installedPackageRef.plugin.name}/{installedPackageRef.plugin.version}/c/{installedPackageRef.context.cluster}/ns/{installedPackageRef.context.namespace}/{installedPackageRef.identifier}', 'DELETE',
@@ -365,7 +365,7 @@ class PackagesServiceApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.auth_settings()
 
         return self.api_client.call_api(
             '/apis/core/packages/v1alpha1/availablepackages/plugin/{availablePackageRef.plugin.name}/{availablePackageRef.plugin.version}/c/{availablePackageRef.context.cluster}/ns/{availablePackageRef.context.namespace}/{availablePackageRef.identifier}', 'GET',
@@ -488,7 +488,7 @@ class PackagesServiceApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.auth_settings()
 
         return self.api_client.call_api(
             '/apis/core/packages/v1alpha1/availablepackages', 'GET',
@@ -617,7 +617,7 @@ class PackagesServiceApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.auth_settings()
 
         return self.api_client.call_api(
             '/apis/core/packages/v1alpha1/availablepackages/plugin/{availablePackageRef.plugin.name}/{availablePackageRef.plugin.version}/c/{availablePackageRef.context.cluster}/ns/{availablePackageRef.context.namespace}/{availablePackageRef.identifier}/versions', 'GET',
@@ -742,7 +742,7 @@ class PackagesServiceApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.auth_settings()
 
         return self.api_client.call_api(
             '/apis/core/packages/v1alpha1/installedpackages/plugin/{installedPackageRef.plugin.name}/{installedPackageRef.plugin.version}/c/{installedPackageRef.context.cluster}/ns/{installedPackageRef.context.namespace}/{installedPackageRef.identifier}', 'GET',
@@ -867,7 +867,7 @@ class PackagesServiceApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.auth_settings()
 
         return self.api_client.call_api(
             '/apis/core/packages/v1alpha1/installedpackages/plugin/{installedPackageRef.plugin.name}/{installedPackageRef.plugin.version}/c/{installedPackageRef.context.cluster}/ns/{installedPackageRef.context.namespace}/{installedPackageRef.identifier}/resourcerefs', 'GET',
@@ -968,7 +968,7 @@ class PackagesServiceApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.auth_settings()
 
         return self.api_client.call_api(
             '/apis/core/packages/v1alpha1/installedpackages', 'GET',
@@ -1105,7 +1105,7 @@ class PackagesServiceApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.auth_settings()
 
         return self.api_client.call_api(
             '/apis/core/packages/v1alpha1/installedpackages/plugin/{installedPackageRef.plugin.name}/{installedPackageRef.plugin.version}/c/{installedPackageRef.context.cluster}/ns/{installedPackageRef.context.namespace}/{installedPackageRef.identifier}', 'PUT',
