@@ -1,17 +1,17 @@
-# swagger_client.ResourcesServiceApi
+# kubeapps_client.ResourcesServiceApi
 
-All URIs are relative to *{schema}://{url}:{port}*
+All URIs are relative to *http://127.0.0.1:8080/apis*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**resources_service_can_i**](ResourcesServiceApi.md#resources_service_can_i) | **POST** /apis/plugins/resources/v1alpha1/c/{context.cluster}/can-i | 
-[**resources_service_check_namespace_exists**](ResourcesServiceApi.md#resources_service_check_namespace_exists) | **GET** /apis/plugins/resources/v1alpha1/c/{context.cluster}/ns/{context.namespace} | 
-[**resources_service_create_namespace**](ResourcesServiceApi.md#resources_service_create_namespace) | **POST** /apis/plugins/resources/v1alpha1/c/{context.cluster}/ns | 
-[**resources_service_create_secret**](ResourcesServiceApi.md#resources_service_create_secret) | **POST** /apis/plugins/resources/v1alpha1/c/{context.cluster}/ns/{context.namespace}/secrets | 
-[**resources_service_get_namespace_names**](ResourcesServiceApi.md#resources_service_get_namespace_names) | **GET** /apis/plugins/resources/v1alpha1/c/{cluster}/namespacenames | 
-[**resources_service_get_resources**](ResourcesServiceApi.md#resources_service_get_resources) | **GET** /apis/plugins/resources/v1alpha1/{installedPackageRef.plugin.name}/{installedPackageRef.plugin.version}/c/{installedPackageRef.context.cluster}/ns/{installedPackageRef.context.namespace}/{installedPackageRef.identifier} | 
-[**resources_service_get_secret_names**](ResourcesServiceApi.md#resources_service_get_secret_names) | **GET** /apis/plugins/resources/v1alpha1/c/{context.cluster}/ns/{context.namespace}/secretnames | 
-[**resources_service_get_service_account_names**](ResourcesServiceApi.md#resources_service_get_service_account_names) | **GET** /apis/plugins/resources/v1alpha1/c/{context.cluster}/ns/{context.namespace}/serviceaccountnames | 
+[**resources_service_can_i**](ResourcesServiceApi.md#resources_service_can_i) | **POST** /plugins/resources/v1alpha1/c/{context.cluster}/can-i | 
+[**resources_service_check_namespace_exists**](ResourcesServiceApi.md#resources_service_check_namespace_exists) | **GET** /plugins/resources/v1alpha1/c/{context.cluster}/ns/{context.namespace} | 
+[**resources_service_create_namespace**](ResourcesServiceApi.md#resources_service_create_namespace) | **POST** /plugins/resources/v1alpha1/c/{context.cluster}/ns | 
+[**resources_service_create_secret**](ResourcesServiceApi.md#resources_service_create_secret) | **POST** /plugins/resources/v1alpha1/c/{context.cluster}/ns/{context.namespace}/secrets | 
+[**resources_service_get_namespace_names**](ResourcesServiceApi.md#resources_service_get_namespace_names) | **GET** /plugins/resources/v1alpha1/c/{cluster}/namespacenames | 
+[**resources_service_get_resources**](ResourcesServiceApi.md#resources_service_get_resources) | **GET** /plugins/resources/v1alpha1/{installedPackageRef.plugin.name}/{installedPackageRef.plugin.version}/c/{installedPackageRef.context.cluster}/ns/{installedPackageRef.context.namespace}/{installedPackageRef.identifier} | 
+[**resources_service_get_secret_names**](ResourcesServiceApi.md#resources_service_get_secret_names) | **GET** /plugins/resources/v1alpha1/c/{context.cluster}/ns/{context.namespace}/secretnames | 
+[**resources_service_get_service_account_names**](ResourcesServiceApi.md#resources_service_get_service_account_names) | **GET** /plugins/resources/v1alpha1/c/{context.cluster}/ns/{context.namespace}/serviceaccountnames | 
 
 # **resources_service_can_i**
 > V1alpha1CanIResponse resources_service_can_i(context_cluster, context_namespace=context_namespace, group=group, resource=resource, verb=verb)
@@ -22,12 +22,18 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.ResourcesServiceApi()
+api_instance = kubeapps_client.ResourcesServiceApi(kubeapps_client.ApiClient(configuration))
 context_cluster = 'context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed.
 context_namespace = 'context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need. (optional)
 group = 'group_example' # str | Group API Group of the Resource.  \"*\" means all. +optional (optional)
@@ -57,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -75,12 +81,18 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.ResourcesServiceApi()
+api_instance = kubeapps_client.ResourcesServiceApi(kubeapps_client.ApiClient(configuration))
 context_cluster = 'context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed.
 context_namespace = 'context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need.
 
@@ -104,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -114,7 +126,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **resources_service_create_namespace**
-> V1alpha1CreateNamespaceResponse resources_service_create_namespace(context_cluster, context_namespace=context_namespace)
+> V1alpha1CreateNamespaceResponse resources_service_create_namespace(context_cluster, context_namespace=context_namespace, labels=labels)
 
 
 
@@ -122,17 +134,24 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.ResourcesServiceApi()
+api_instance = kubeapps_client.ResourcesServiceApi(kubeapps_client.ApiClient(configuration))
 context_cluster = 'context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed.
 context_namespace = 'context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need. (optional)
+labels = 'labels_example' # str | Labels  This is a request variable of the map type. The query format is \"map_name[key]=value\", e.g. If the map name is Age, the key type is string, and the value type is integer, the query parameter is expressed as Age[\"bob\"]=18 (optional)
 
 try:
-    api_response = api_instance.resources_service_create_namespace(context_cluster, context_namespace=context_namespace)
+    api_response = api_instance.resources_service_create_namespace(context_cluster, context_namespace=context_namespace, labels=labels)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ResourcesServiceApi->resources_service_create_namespace: %s\n" % e)
@@ -144,6 +163,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **context_cluster** | **str**| Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed. | 
  **context_namespace** | **str**| Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need. | [optional] 
+ **labels** | **str**| Labels  This is a request variable of the map type. The query format is \&quot;map_name[key]&#x3D;value\&quot;, e.g. If the map name is Age, the key type is string, and the value type is integer, the query parameter is expressed as Age[\&quot;bob\&quot;]&#x3D;18 | [optional] 
 
 ### Return type
 
@@ -151,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -161,7 +181,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **resources_service_create_secret**
-> V1alpha1CreateSecretResponse resources_service_create_secret(context_cluster, context_namespace, type=type, name=name)
+> V1alpha1CreateSecretResponse resources_service_create_secret(context_cluster, context_namespace, type=type, name=name, string_data=string_data)
 
 
 
@@ -169,19 +189,26 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.ResourcesServiceApi()
+api_instance = kubeapps_client.ResourcesServiceApi(kubeapps_client.ApiClient(configuration))
 context_cluster = 'context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed.
 context_namespace = 'context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need.
 type = 'SECRET_TYPE_OPAQUE_UNSPECIFIED' # str | Type  The type of the secret. Valid values are defined by the Type enumeration. (optional) (default to SECRET_TYPE_OPAQUE_UNSPECIFIED)
 name = 'name_example' # str | Name  The name of the secret. (optional)
+string_data = 'string_data_example' # str | StringData  This is a request variable of the map type. The query format is \"map_name[key]=value\", e.g. If the map name is Age, the key type is string, and the value type is integer, the query parameter is expressed as Age[\"bob\"]=18 (optional)
 
 try:
-    api_response = api_instance.resources_service_create_secret(context_cluster, context_namespace, type=type, name=name)
+    api_response = api_instance.resources_service_create_secret(context_cluster, context_namespace, type=type, name=name, string_data=string_data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ResourcesServiceApi->resources_service_create_secret: %s\n" % e)
@@ -195,6 +222,7 @@ Name | Type | Description  | Notes
  **context_namespace** | **str**| Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need. | 
  **type** | **str**| Type  The type of the secret. Valid values are defined by the Type enumeration. | [optional] [default to SECRET_TYPE_OPAQUE_UNSPECIFIED]
  **name** | **str**| Name  The name of the secret. | [optional] 
+ **string_data** | **str**| StringData  This is a request variable of the map type. The query format is \&quot;map_name[key]&#x3D;value\&quot;, e.g. If the map name is Age, the key type is string, and the value type is integer, the query parameter is expressed as Age[\&quot;bob\&quot;]&#x3D;18 | [optional] 
 
 ### Return type
 
@@ -202,7 +230,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -220,12 +248,18 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.ResourcesServiceApi()
+api_instance = kubeapps_client.ResourcesServiceApi(kubeapps_client.ApiClient(configuration))
 cluster = 'cluster_example' # str | Cluster  The context for which the namespace names are being fetched.  The service will attempt to list namespaces across the cluster, first with the users credential, then with a configured service account if available.
 
 try:
@@ -247,7 +281,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -265,12 +299,18 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.ResourcesServiceApi()
+api_instance = kubeapps_client.ResourcesServiceApi(kubeapps_client.ApiClient(configuration))
 installed_package_ref_plugin_name = 'installed_package_ref_plugin_name_example' # str | Plugin name  The name of the plugin, such as `fluxv2.packages` or `kapp_controller.packages`.
 installed_package_ref_plugin_version = 'installed_package_ref_plugin_version_example' # str | Plugin version  The version of the plugin, such as v1alpha1
 installed_package_ref_context_cluster = 'installed_package_ref_context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed.
@@ -302,7 +342,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -320,12 +360,18 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.ResourcesServiceApi()
+api_instance = kubeapps_client.ResourcesServiceApi(kubeapps_client.ApiClient(configuration))
 context_cluster = 'context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed.
 context_namespace = 'context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need.
 
@@ -349,7 +395,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -367,12 +413,18 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.ResourcesServiceApi()
+api_instance = kubeapps_client.ResourcesServiceApi(kubeapps_client.ApiClient(configuration))
 context_cluster = 'context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed.
 context_namespace = 'context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need.
 
@@ -396,7 +448,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

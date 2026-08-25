@@ -1,19 +1,19 @@
-# swagger_client.HelmPackagesServiceApi
+# kubeapps_client.HelmPackagesServiceApi
 
-All URIs are relative to *{schema}://{url}:{port}*
+All URIs are relative to *http://127.0.0.1:8080/apis*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**helm_packages_service_create_installed_package**](HelmPackagesServiceApi.md#helm_packages_service_create_installed_package) | **POST** /apis/plugins/helm/packages/v1alpha1/installedpackages | CreateInstalledPackage creates an installed package based on the request.
-[**helm_packages_service_delete_installed_package**](HelmPackagesServiceApi.md#helm_packages_service_delete_installed_package) | **DELETE** /apis/plugins/helm/packages/v1alpha1/installedpackages/c/{installedPackageRef.context.cluster}/ns/{installedPackageRef.context.namespace}/{installedPackageRef.identifier} | DeleteInstalledPackage deletes an installed package based on the request.
-[**helm_packages_service_get_available_package_detail**](HelmPackagesServiceApi.md#helm_packages_service_get_available_package_detail) | **GET** /apis/plugins/helm/packages/v1alpha1/availablepackages/c/{availablePackageRef.context.cluster}/ns/{availablePackageRef.context.namespace}/{availablePackageRef.identifier} | GetAvailablePackageDetail returns the package details managed by the &#x27;helm&#x27; plugin
-[**helm_packages_service_get_available_package_summaries**](HelmPackagesServiceApi.md#helm_packages_service_get_available_package_summaries) | **GET** /apis/plugins/helm/packages/v1alpha1/availablepackages | GetAvailablePackageSummaries returns the available packages managed by the &#x27;helm&#x27; plugin
-[**helm_packages_service_get_available_package_versions**](HelmPackagesServiceApi.md#helm_packages_service_get_available_package_versions) | **GET** /apis/plugins/helm/packages/v1alpha1/availablepackages/c/{availablePackageRef.context.cluster}/ns/{availablePackageRef.context.namespace}/{availablePackageRef.identifier}/versions | GetAvailablePackageVersions returns the package versions managed by the &#x27;helm&#x27; plugin
-[**helm_packages_service_get_installed_package_detail**](HelmPackagesServiceApi.md#helm_packages_service_get_installed_package_detail) | **GET** /apis/plugins/helm/packages/v1alpha1/installedpackages/c/{installedPackageRef.context.cluster}/ns/{installedPackageRef.context.namespace}/{installedPackageRef.identifier} | GetInstalledPackageDetail returns the requested installed package managed by the &#x27;helm&#x27; plugin
-[**helm_packages_service_get_installed_package_resource_refs**](HelmPackagesServiceApi.md#helm_packages_service_get_installed_package_resource_refs) | **GET** /apis/plugins/helm/packages/v1alpha1/installedpackages/c/{installedPackageRef.context.cluster}/ns/{installedPackageRef.context.namespace}/{installedPackageRef.identifier}/resourcerefs | GetInstalledPackageResourceRefs returns the references for the Kubernetes resources created by an installed package.
-[**helm_packages_service_get_installed_package_summaries**](HelmPackagesServiceApi.md#helm_packages_service_get_installed_package_summaries) | **GET** /apis/plugins/helm/packages/v1alpha1/installedpackages | GetInstalledPackageSummaries returns the installed packages managed by the &#x27;helm&#x27; plugin
-[**helm_packages_service_rollback_installed_package**](HelmPackagesServiceApi.md#helm_packages_service_rollback_installed_package) | **PUT** /apis/plugins/helm/packages/v1alpha1/installedpackages/c/{installedPackageRef.context.cluster}/ns/{installedPackageRef.context.namespace}/{installedPackageRef.identifier}/rollback | RollbackInstalledPackage updates an installed package based on the request.
-[**helm_packages_service_update_installed_package**](HelmPackagesServiceApi.md#helm_packages_service_update_installed_package) | **PUT** /apis/plugins/helm/packages/v1alpha1/installedpackages/c/{installedPackageRef.context.cluster}/ns/{installedPackageRef.context.namespace}/{installedPackageRef.identifier} | UpdateInstalledPackage updates an installed package based on the request.
+[**helm_packages_service_create_installed_package**](HelmPackagesServiceApi.md#helm_packages_service_create_installed_package) | **POST** /plugins/helm/packages/v1alpha1/installedpackages | CreateInstalledPackage creates an installed package based on the request.
+[**helm_packages_service_delete_installed_package**](HelmPackagesServiceApi.md#helm_packages_service_delete_installed_package) | **DELETE** /plugins/helm/packages/v1alpha1/installedpackages/c/{installedPackageRef.context.cluster}/ns/{installedPackageRef.context.namespace}/{installedPackageRef.identifier} | DeleteInstalledPackage deletes an installed package based on the request.
+[**helm_packages_service_get_available_package_detail**](HelmPackagesServiceApi.md#helm_packages_service_get_available_package_detail) | **GET** /plugins/helm/packages/v1alpha1/availablepackages/c/{availablePackageRef.context.cluster}/ns/{availablePackageRef.context.namespace}/{availablePackageRef.identifier} | GetAvailablePackageDetail returns the package details managed by the &#x27;helm&#x27; plugin
+[**helm_packages_service_get_available_package_summaries**](HelmPackagesServiceApi.md#helm_packages_service_get_available_package_summaries) | **GET** /plugins/helm/packages/v1alpha1/availablepackages | GetAvailablePackageSummaries returns the available packages managed by the &#x27;helm&#x27; plugin
+[**helm_packages_service_get_available_package_versions**](HelmPackagesServiceApi.md#helm_packages_service_get_available_package_versions) | **GET** /plugins/helm/packages/v1alpha1/availablepackages/c/{availablePackageRef.context.cluster}/ns/{availablePackageRef.context.namespace}/{availablePackageRef.identifier}/versions | GetAvailablePackageVersions returns the package versions managed by the &#x27;helm&#x27; plugin
+[**helm_packages_service_get_installed_package_detail**](HelmPackagesServiceApi.md#helm_packages_service_get_installed_package_detail) | **GET** /plugins/helm/packages/v1alpha1/installedpackages/c/{installedPackageRef.context.cluster}/ns/{installedPackageRef.context.namespace}/{installedPackageRef.identifier} | GetInstalledPackageDetail returns the requested installed package managed by the &#x27;helm&#x27; plugin
+[**helm_packages_service_get_installed_package_resource_refs**](HelmPackagesServiceApi.md#helm_packages_service_get_installed_package_resource_refs) | **GET** /plugins/helm/packages/v1alpha1/installedpackages/c/{installedPackageRef.context.cluster}/ns/{installedPackageRef.context.namespace}/{installedPackageRef.identifier}/resourcerefs | GetInstalledPackageResourceRefs returns the references for the Kubernetes resources created by an installed package.
+[**helm_packages_service_get_installed_package_summaries**](HelmPackagesServiceApi.md#helm_packages_service_get_installed_package_summaries) | **GET** /plugins/helm/packages/v1alpha1/installedpackages | GetInstalledPackageSummaries returns the installed packages managed by the &#x27;helm&#x27; plugin
+[**helm_packages_service_rollback_installed_package**](HelmPackagesServiceApi.md#helm_packages_service_rollback_installed_package) | **PUT** /plugins/helm/packages/v1alpha1/installedpackages/c/{installedPackageRef.context.cluster}/ns/{installedPackageRef.context.namespace}/{installedPackageRef.identifier}/rollback | RollbackInstalledPackage updates an installed package based on the request.
+[**helm_packages_service_update_installed_package**](HelmPackagesServiceApi.md#helm_packages_service_update_installed_package) | **PUT** /plugins/helm/packages/v1alpha1/installedpackages/c/{installedPackageRef.context.cluster}/ns/{installedPackageRef.context.namespace}/{installedPackageRef.identifier} | UpdateInstalledPackage updates an installed package based on the request.
 
 # **helm_packages_service_create_installed_package**
 > V1alpha1CreateInstalledPackageResponse helm_packages_service_create_installed_package(body)
@@ -24,13 +24,19 @@ CreateInstalledPackage creates an installed package based on the request.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.HelmPackagesServiceApi()
-body = swagger_client.V1alpha1CreateInstalledPackageRequest() # V1alpha1CreateInstalledPackageRequest | Request for CreateInstalledPackage
+api_instance = kubeapps_client.HelmPackagesServiceApi(kubeapps_client.ApiClient(configuration))
+body = kubeapps_client.V1alpha1CreateInstalledPackageRequest() # V1alpha1CreateInstalledPackageRequest | Request for CreateInstalledPackage
 
 try:
     # CreateInstalledPackage creates an installed package based on the request.
@@ -52,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -70,12 +76,18 @@ DeleteInstalledPackage deletes an installed package based on the request.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.HelmPackagesServiceApi()
+api_instance = kubeapps_client.HelmPackagesServiceApi(kubeapps_client.ApiClient(configuration))
 installed_package_ref_context_cluster = 'installed_package_ref_context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed.
 installed_package_ref_context_namespace = 'installed_package_ref_context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need.
 installed_package_ref_identifier = 'installed_package_ref_identifier_example' # str | The fully qualified identifier for the installed package (ie. a unique name for the context).
@@ -106,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -124,12 +136,18 @@ GetAvailablePackageDetail returns the package details managed by the 'helm' plug
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.HelmPackagesServiceApi()
+api_instance = kubeapps_client.HelmPackagesServiceApi(kubeapps_client.ApiClient(configuration))
 available_package_ref_context_cluster = 'available_package_ref_context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed.
 available_package_ref_context_namespace = 'available_package_ref_context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need.
 available_package_ref_identifier = 'available_package_ref_identifier_example' # str | Available package identifier  The fully qualified identifier for the available package (ie. a unique name for the context). For some packaging systems (particularly those where an available package is backed by a CR) this will just be the name, but for others such as those where an available package is not backed by a CR (eg. standard helm) it may be necessary to include the repository in the name or even the repo namespace to ensure this is unique. For example two helm repositories can define an \"apache\" chart that is available globally, the names would need to encode that to be unique (ie. \"repoA:apache\" and \"repoB:apache\").
@@ -162,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -180,12 +198,18 @@ GetAvailablePackageSummaries returns the available packages managed by the 'helm
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.HelmPackagesServiceApi()
+api_instance = kubeapps_client.HelmPackagesServiceApi(kubeapps_client.ApiClient(configuration))
 context_cluster = 'context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed. (optional)
 context_namespace = 'context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need. (optional)
 filter_options_query = 'filter_options_query_example' # str | Text query  Text query for the request (optional)
@@ -224,7 +248,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -242,12 +266,18 @@ GetAvailablePackageVersions returns the package versions managed by the 'helm' p
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.HelmPackagesServiceApi()
+api_instance = kubeapps_client.HelmPackagesServiceApi(kubeapps_client.ApiClient(configuration))
 available_package_ref_context_cluster = 'available_package_ref_context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed.
 available_package_ref_context_namespace = 'available_package_ref_context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need.
 available_package_ref_identifier = 'available_package_ref_identifier_example' # str | Available package identifier  The fully qualified identifier for the available package (ie. a unique name for the context). For some packaging systems (particularly those where an available package is backed by a CR) this will just be the name, but for others such as those where an available package is not backed by a CR (eg. standard helm) it may be necessary to include the repository in the name or even the repo namespace to ensure this is unique. For example two helm repositories can define an \"apache\" chart that is available globally, the names would need to encode that to be unique (ie. \"repoA:apache\" and \"repoB:apache\").
@@ -280,7 +310,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -298,12 +328,18 @@ GetInstalledPackageDetail returns the requested installed package managed by the
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.HelmPackagesServiceApi()
+api_instance = kubeapps_client.HelmPackagesServiceApi(kubeapps_client.ApiClient(configuration))
 installed_package_ref_context_cluster = 'installed_package_ref_context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed.
 installed_package_ref_context_namespace = 'installed_package_ref_context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need.
 installed_package_ref_identifier = 'installed_package_ref_identifier_example' # str | The fully qualified identifier for the installed package (ie. a unique name for the context).
@@ -334,7 +370,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -352,12 +388,18 @@ GetInstalledPackageResourceRefs returns the references for the Kubernetes resour
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.HelmPackagesServiceApi()
+api_instance = kubeapps_client.HelmPackagesServiceApi(kubeapps_client.ApiClient(configuration))
 installed_package_ref_context_cluster = 'installed_package_ref_context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed.
 installed_package_ref_context_namespace = 'installed_package_ref_context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need.
 installed_package_ref_identifier = 'installed_package_ref_identifier_example' # str | The fully qualified identifier for the installed package (ie. a unique name for the context).
@@ -388,7 +430,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -406,12 +448,18 @@ GetInstalledPackageSummaries returns the installed packages managed by the 'helm
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.HelmPackagesServiceApi()
+api_instance = kubeapps_client.HelmPackagesServiceApi(kubeapps_client.ApiClient(configuration))
 context_cluster = 'context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed. (optional)
 context_namespace = 'context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need. (optional)
 pagination_options_page_token = 'pagination_options_page_token_example' # str | Page token  The client uses this field to request a specific page of the list results. (optional)
@@ -440,7 +488,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -458,13 +506,19 @@ RollbackInstalledPackage updates an installed package based on the request.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.HelmPackagesServiceApi()
-body = swagger_client.InstalledPackageRefIdentifierRollbackBody() # InstalledPackageRefIdentifierRollbackBody | 
+api_instance = kubeapps_client.HelmPackagesServiceApi(kubeapps_client.ApiClient(configuration))
+body = kubeapps_client.HelmPackagesServiceRollbackInstalledPackageBody() # HelmPackagesServiceRollbackInstalledPackageBody | 
 installed_package_ref_context_cluster = 'installed_package_ref_context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed.
 installed_package_ref_context_namespace = 'installed_package_ref_context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need.
 installed_package_ref_identifier = 'installed_package_ref_identifier_example' # str | The fully qualified identifier for the installed package (ie. a unique name for the context).
@@ -481,7 +535,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**InstalledPackageRefIdentifierRollbackBody**](InstalledPackageRefIdentifierRollbackBody.md)|  | 
+ **body** | [**HelmPackagesServiceRollbackInstalledPackageBody**](HelmPackagesServiceRollbackInstalledPackageBody.md)|  | 
  **installed_package_ref_context_cluster** | **str**| Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed. | 
  **installed_package_ref_context_namespace** | **str**| Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need. | 
  **installed_package_ref_identifier** | **str**| The fully qualified identifier for the installed package (ie. a unique name for the context). | 
@@ -492,7 +546,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -510,13 +564,19 @@ UpdateInstalledPackage updates an installed package based on the request.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.HelmPackagesServiceApi()
-body = NULL # object | 
+api_instance = kubeapps_client.HelmPackagesServiceApi(kubeapps_client.ApiClient(configuration))
+body = kubeapps_client.V1alpha1HelmPackagesServiceUpdateInstalledPackageBody() # V1alpha1HelmPackagesServiceUpdateInstalledPackageBody | 
 installed_package_ref_context_cluster = 'installed_package_ref_context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed.
 installed_package_ref_context_namespace = 'installed_package_ref_context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need.
 installed_package_ref_identifier = 'installed_package_ref_identifier_example' # str | The fully qualified identifier for the installed package (ie. a unique name for the context).
@@ -533,7 +593,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**object**](object.md)|  | 
+ **body** | [**V1alpha1HelmPackagesServiceUpdateInstalledPackageBody**](V1alpha1HelmPackagesServiceUpdateInstalledPackageBody.md)|  | 
  **installed_package_ref_context_cluster** | **str**| Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed. | 
  **installed_package_ref_context_namespace** | **str**| Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need. | 
  **installed_package_ref_identifier** | **str**| The fully qualified identifier for the installed package (ie. a unique name for the context). | 
@@ -544,7 +604,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

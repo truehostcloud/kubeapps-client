@@ -1,4 +1,4 @@
-# InstalledPackageRefIdentifierRollbackBody
+# HelmPackagesServiceRollbackInstalledPackageBody
 
 ## Properties
 Name | Type | Description | Notes

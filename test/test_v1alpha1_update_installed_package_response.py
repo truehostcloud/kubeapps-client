@@ -3,7 +3,7 @@
 """
     Kubeapps API
 
-    [![CircleCI](https://circleci.com/gh/vmware-tanzu/kubeapps/tree/main.svg?style=svg)](https://circleci.com/gh/vmware-tanzu/kubeapps/tree/main)   [Kubeapps](https://github.com/vmware-tanzu/kubeapps) is a web-based UI for deploying and managing applications in Kubernetes clusters.   Note: this API documentation is still in an initial stage and is subject to change. Before coupling to it, please [drop us an issue](https://github.com/vmware-tanzu/kubeapps/issues/new/choose) or reach us [via Slack](https://kubernetes.slack.com/messages/kubeapps) to know more about your use case and see how we can assist you.  #### Developer Documentation  - The [Kubeapps Architecture Overview](https://kubeapps.dev/docs/latest/background/architecture/).  - The [Kubeapps Developer Documentation](https://kubeapps.dev/docs/latest/reference/developer/) for instructions on setting up the developer environment for developing on Kubeapps and its components.  - The [Kubeapps Build Guide](https://kubeapps.dev/docs/latest/reference/developer/build/) for instructions on setting up the build environment and building Kubeapps from source.   # noqa: E501
+    [![Main Pipeline](https://github.com/vmware-tanzu/kubeapps/actions/workflows/kubeapps-main.yaml/badge.svg)](https://github.com/vmware-tanzu/kubeapps/actions/workflows/kubeapps-main.yaml)    [Kubeapps](https://github.com/vmware-tanzu/kubeapps) is a web-based UI for deploying and managing applications in Kubernetes clusters.    Note: this API documentation is still in an initial stage and is subject to change. Before coupling to it, please [drop us an issue](https://github.com/vmware-tanzu/kubeapps/issues/new/choose) or reach us [via Slack](https://kubernetes.slack.com/messages/kubeapps) to know more about your use case and see how we can assist you.  #### Developer Documentation  - The [Kubeapps architecture overview](https://github.com/vmware-tanzu/kubeapps/blob/main/site/content/docs/latest/background/architecture.md).  - The [Kubeapps Developer Documentation](https://github.com/vmware-tanzu/kubeapps/blob/main/site/content/docs/latest/reference/developer/README.md) for instructions on setting up the developer environment for developing on Kubeapps and its components.  - The [Kubeapps Build Guide](https://github.com/vmware-tanzu/kubeapps/blob/main/site/content/docs/latest/reference/developer/build.md) for instructions on setting up the build environment and building Kubeapps from source.   # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.v1alpha1_update_installed_package_response import V1alpha1UpdateInstalledPackageResponse  # noqa: E501
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.models.v1alpha1_update_installed_package_response import V1alpha1UpdateInstalledPackageResponse  # noqa: E501
+from kubeapps_client.rest import ApiException
 
 
 class TestV1alpha1UpdateInstalledPackageResponse(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestV1alpha1UpdateInstalledPackageResponse(unittest.TestCase):
     def testV1alpha1UpdateInstalledPackageResponse(self):
         """Test V1alpha1UpdateInstalledPackageResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.v1alpha1_update_installed_package_response.V1alpha1UpdateInstalledPackageResponse()  # noqa: E501
+        # model = kubeapps_client.models.v1alpha1_update_installed_package_response.V1alpha1UpdateInstalledPackageResponse()  # noqa: E501
         pass
 
 

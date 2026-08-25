@@ -1,9 +1,9 @@
-# UpdatePackageRepositoryRequest
+# V1alpha1RepositoriesServiceUpdatePackageRepositoryBody
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**package_repo_ref** | [**AReferenceUniquelyIdentifyingThePackageRepositoryBeingUpdatedTheOnlyRequiredField**](AReferenceUniquelyIdentifyingThePackageRepositoryBeingUpdatedTheOnlyRequiredField.md) |  | [optional] 
+**package_repo_ref** | [**AReferenceUniquelyIdentifyingThePackageRepositoryBeingUpdatedTheOnlyRequiredField1**](AReferenceUniquelyIdentifyingThePackageRepositoryBeingUpdatedTheOnlyRequiredField1.md) |  | [optional] 
 **url** | **str** | URL identifying the package repository location. | [optional] 
 **description** | **str** | A user-provided description. | [optional] 
 **interval** | **str** |  | [optional] 

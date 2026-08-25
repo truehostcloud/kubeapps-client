@@ -1,15 +1,15 @@
-# swagger_client.KappControllerRepositoriesServiceApi
+# kubeapps_client.KappControllerRepositoriesServiceApi
 
-All URIs are relative to *{schema}://{url}:{port}*
+All URIs are relative to *http://127.0.0.1:8080/apis*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**kapp_controller_repositories_service_add_package_repository**](KappControllerRepositoriesServiceApi.md#kapp_controller_repositories_service_add_package_repository) | **POST** /apis/plugins/kapp_controller/packages/v1alpha1/repositories | AddPackageRepository add an existing package repository to the set of ones already managed by the &#x27;kapp_controller&#x27; plugin
-[**kapp_controller_repositories_service_delete_package_repository**](KappControllerRepositoriesServiceApi.md#kapp_controller_repositories_service_delete_package_repository) | **DELETE** /apis/plugins/kapp_controller/packages/v1alpha1/repositories/c/{packageRepoRef.context.cluster}/ns/{packageRepoRef.context.namespace}/{packageRepoRef.identifier} | 
-[**kapp_controller_repositories_service_get_package_repository_detail**](KappControllerRepositoriesServiceApi.md#kapp_controller_repositories_service_get_package_repository_detail) | **GET** /apis/plugins/kapp_controller/packages/v1alpha1/repositories/c/{packageRepoRef.context.cluster}/ns/{packageRepoRef.context.namespace}/{packageRepoRef.identifier} | 
-[**kapp_controller_repositories_service_get_package_repository_permissions**](KappControllerRepositoriesServiceApi.md#kapp_controller_repositories_service_get_package_repository_permissions) | **GET** /apis/plugins/kapp_controller/packages/v1alpha1/repositories/c/{context.cluster}/permissions | 
-[**kapp_controller_repositories_service_get_package_repository_summaries**](KappControllerRepositoriesServiceApi.md#kapp_controller_repositories_service_get_package_repository_summaries) | **GET** /apis/plugins/kapp_controller/packages/v1alpha1/repositories | 
-[**kapp_controller_repositories_service_update_package_repository**](KappControllerRepositoriesServiceApi.md#kapp_controller_repositories_service_update_package_repository) | **PUT** /apis/plugins/kapp_controller/packages/v1alpha1/repositories/c/{packageRepoRef.context.cluster}/ns/{packageRepoRef.context.namespace}/{packageRepoRef.identifier} | 
+[**kapp_controller_repositories_service_add_package_repository**](KappControllerRepositoriesServiceApi.md#kapp_controller_repositories_service_add_package_repository) | **POST** /plugins/kapp_controller/packages/v1alpha1/repositories | AddPackageRepository add an existing package repository to the set of ones already managed by the &#x27;kapp_controller&#x27; plugin
+[**kapp_controller_repositories_service_delete_package_repository**](KappControllerRepositoriesServiceApi.md#kapp_controller_repositories_service_delete_package_repository) | **DELETE** /plugins/kapp_controller/packages/v1alpha1/repositories/c/{packageRepoRef.context.cluster}/ns/{packageRepoRef.context.namespace}/{packageRepoRef.identifier} | 
+[**kapp_controller_repositories_service_get_package_repository_detail**](KappControllerRepositoriesServiceApi.md#kapp_controller_repositories_service_get_package_repository_detail) | **GET** /plugins/kapp_controller/packages/v1alpha1/repositories/c/{packageRepoRef.context.cluster}/ns/{packageRepoRef.context.namespace}/{packageRepoRef.identifier} | 
+[**kapp_controller_repositories_service_get_package_repository_permissions**](KappControllerRepositoriesServiceApi.md#kapp_controller_repositories_service_get_package_repository_permissions) | **GET** /plugins/kapp_controller/packages/v1alpha1/repositories/c/{context.cluster}/permissions | 
+[**kapp_controller_repositories_service_get_package_repository_summaries**](KappControllerRepositoriesServiceApi.md#kapp_controller_repositories_service_get_package_repository_summaries) | **GET** /plugins/kapp_controller/packages/v1alpha1/repositories | 
+[**kapp_controller_repositories_service_update_package_repository**](KappControllerRepositoriesServiceApi.md#kapp_controller_repositories_service_update_package_repository) | **PUT** /plugins/kapp_controller/packages/v1alpha1/repositories/c/{packageRepoRef.context.cluster}/ns/{packageRepoRef.context.namespace}/{packageRepoRef.identifier} | 
 
 # **kapp_controller_repositories_service_add_package_repository**
 > V1alpha1AddPackageRepositoryResponse kapp_controller_repositories_service_add_package_repository(body)
@@ -20,13 +20,19 @@ AddPackageRepository add an existing package repository to the set of ones alrea
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.KappControllerRepositoriesServiceApi()
-body = swagger_client.V1alpha1AddPackageRepositoryRequest() # V1alpha1AddPackageRepositoryRequest | Request for AddPackageRepository
+api_instance = kubeapps_client.KappControllerRepositoriesServiceApi(kubeapps_client.ApiClient(configuration))
+body = kubeapps_client.V1alpha1AddPackageRepositoryRequest() # V1alpha1AddPackageRepositoryRequest | Request for AddPackageRepository
 
 try:
     # AddPackageRepository add an existing package repository to the set of ones already managed by the 'kapp_controller' plugin
@@ -48,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -66,12 +72,18 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.KappControllerRepositoriesServiceApi()
+api_instance = kubeapps_client.KappControllerRepositoriesServiceApi(kubeapps_client.ApiClient(configuration))
 package_repo_ref_context_cluster = 'package_repo_ref_context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed.
 package_repo_ref_context_namespace = 'package_repo_ref_context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need.
 package_repo_ref_identifier = 'package_repo_ref_identifier_example' # str | The fully qualified identifier for the repository (i.e. a unique name for the context).
@@ -101,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -119,12 +131,18 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.KappControllerRepositoriesServiceApi()
+api_instance = kubeapps_client.KappControllerRepositoriesServiceApi(kubeapps_client.ApiClient(configuration))
 package_repo_ref_context_cluster = 'package_repo_ref_context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed.
 package_repo_ref_context_namespace = 'package_repo_ref_context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need.
 package_repo_ref_identifier = 'package_repo_ref_identifier_example' # str | The fully qualified identifier for the repository (i.e. a unique name for the context).
@@ -154,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -172,12 +190,18 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.KappControllerRepositoriesServiceApi()
+api_instance = kubeapps_client.KappControllerRepositoriesServiceApi(kubeapps_client.ApiClient(configuration))
 context_cluster = 'context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed.
 context_namespace = 'context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need. (optional)
 
@@ -201,7 +225,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -219,12 +243,18 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.KappControllerRepositoriesServiceApi()
+api_instance = kubeapps_client.KappControllerRepositoriesServiceApi(kubeapps_client.ApiClient(configuration))
 context_cluster = 'context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed. (optional)
 context_namespace = 'context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need. (optional)
 
@@ -248,7 +278,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -266,13 +296,19 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import kubeapps_client
+from kubeapps_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = kubeapps_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = swagger_client.KappControllerRepositoriesServiceApi()
-body = NULL # object | 
+api_instance = kubeapps_client.KappControllerRepositoriesServiceApi(kubeapps_client.ApiClient(configuration))
+body = kubeapps_client.V1alpha1KappControllerRepositoriesServiceUpdatePackageRepositoryBody() # V1alpha1KappControllerRepositoriesServiceUpdatePackageRepositoryBody | 
 package_repo_ref_context_cluster = 'package_repo_ref_context_cluster_example' # str | Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed.
 package_repo_ref_context_namespace = 'package_repo_ref_context_namespace_example' # str | Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need.
 package_repo_ref_identifier = 'package_repo_ref_identifier_example' # str | The fully qualified identifier for the repository (i.e. a unique name for the context).
@@ -288,7 +324,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**object**](object.md)|  | 
+ **body** | [**V1alpha1KappControllerRepositoriesServiceUpdatePackageRepositoryBody**](V1alpha1KappControllerRepositoriesServiceUpdatePackageRepositoryBody.md)|  | 
  **package_repo_ref_context_cluster** | **str**| Cluster  A cluster name can be provided to target a specific cluster if multiple clusters are configured, otherwise all clusters will be assumed. | 
  **package_repo_ref_context_namespace** | **str**| Namespace  A namespace must be provided if the context of the operation is for a resource or resources in a particular namespace. For requests to list items, not including a namespace here implies that the context for the request is everything the requesting user can read, though the result can be filtered by any filtering options of the request. Plugins may choose to return Unimplemented for some queries for which we do not yet have a need. | 
  **package_repo_ref_identifier** | **str**| The fully qualified identifier for the repository (i.e. a unique name for the context). | 
@@ -299,7 +335,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
